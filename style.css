@@ -175,36 +175,3 @@ h2 {
     object-fit: contain;
 }
 
-
-
-
-
-
-/* Bilder – anpassning för mobil och dator */
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-/* Bakgrundsbild på startsidan */
-.startsidan {
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-/* Mobilanpassning */
-@media screen and (max-width: 600px) {
-    .startsidan {
-        width: 100%;
-        background-size: cover;
-        background-position: center center;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-        object-fit: contain;
-    }
-}
