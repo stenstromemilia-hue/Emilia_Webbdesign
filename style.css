@@ -1,4 +1,6 @@
-.startsidan {
+/*Länkad till startsidan(.) Bild centrerad och den upprepas inte på sidan. Har lite problem med 500px och flex funktionen. Bilden blir olika beroende på storlek på sidan*/
+
+.startsidan {  
     background-image: url("Webbdesign_Bilder/Header1.jpg");
     background-size: cover;
     background-position: center;
@@ -8,16 +10,22 @@
 
 }
 
+/*Länkat texten till html-filen, centrerad 10 px luft runt omkring texten*/
+
 .intro {
     text-align: center;
     color: rgb(199, 36, 36);
     padding: 10px;
 }
 
+/*hemsidans bakgrundsfärg*/
 
 body {
     background-color: #f5eee8;
 }
+
+
+/*Allt till sökrutan*/
 
 .sok-ruta {
     display: flex;
@@ -39,12 +47,15 @@ body {
 }
 
 
-
+/*Huvudrubrik*/
 h1,
 p {
     text-align: center;
     color: rgb(199, 36, 36);
 }
+
+
+/*På framsidan, meny-leyouten har allt här under*/
 .meny {
     display: flex;
     justify-content: center;
@@ -64,10 +75,14 @@ p {
     object-fit: cover;
 }
 
+
+/*Här finns allt till Portfoliosidan*/
 .portfolio-sida p {
     color: #c72424;
     font-size: 22px;
 }
+
+/*Specialare, för jag ville ha min paragraf i kursiv, fick göra en nu grupp för den som heter obs*/
 
 .portfolio-sida p.obs {
     color: #c72424;
@@ -80,6 +95,8 @@ img {
     height: auto;
 }
 
+
+/*Här finns allt Om mig-sidan*/
 .om-mig-innehall {
     display: flex;
     align-items: center;
@@ -100,6 +117,7 @@ img {
     text-align: left;
 }
 
+/*Rubrik 2 färg och placering.*/
 h2 {
     color: #c72424;
     text-align: center;
@@ -118,7 +136,7 @@ h2 {
 }
 
 
-
+/*Allting till portfoliosidan*/
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -136,6 +154,8 @@ h2 {
 .portfolio-kort h3 {
     color: #c72424;
 }
+
+/*Knappen som är länkad till en ny flik på Nyheter24*/
 
 .nyheter24-knapp {
     display: inline-block;
@@ -175,3 +195,79 @@ h2 {
     object-fit: contain;
 }
 
+
+
+
+/* MOBILANPASSNING */
+
+@media screen and (max-width: 768px) {
+
+    /* Grundinställningar */
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Bilder */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Rubriker */
+    h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    /* Navigering */
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+
+    /* Innehåll och layouter */
+    .om-mig-innehall,
+    .kontakt-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Text */
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    /* Portfolio */
+    .portfolio-kort {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Sociala länkar */
+    .social-lank {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Sökfält */
+    .sok-ruta {
+        max-width: 100%;
+    }
+
+}
