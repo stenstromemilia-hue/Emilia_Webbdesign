@@ -198,76 +198,125 @@ h2 {
 
 
 
+
 /* MOBILANPASSNING */
 
 @media screen and (max-width: 768px) {
 
     /* Grundinställningar */
-    body {
-        width: 100%;
-        margin: 0;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-
     * {
         box-sizing: border-box;
     }
 
-    /* Bilder */
-    img {
-        max-width: 100%;
-        height: auto;
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
     }
 
-    /* Rubriker */
+    /* Startsidan */
+    .startsidan {
+        height: 250px;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* Sökfält */
+    .sok-ruta {
+        justify-content: center;
+        margin: 10px 0;
+        flex-wrap: wrap;
+    }
+
+    /* Menyn på startsidan */
+    .meny {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .meny-kort {
+        width: 100%;
+    }
+
+    .meny-kort img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    /* Rubriker och text */
     h1 {
         font-size: 28px;
-        text-align: center;
     }
 
     h2 {
         font-size: 23px;
     }
 
-    /* Navigering */
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    nav a {
-        margin: 5px;
-    }
-
-    /* Innehåll och layouter */
-    .om-mig-innehall,
-    .kontakt-layout {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* Text */
     p {
         font-size: 16px;
         line-height: 1.5;
     }
 
+    /* Om mig */
+    .om-mig-innehall {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
+        gap: 20px;
+    }
+
+    .profilbild {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .om-mig-text {
+        width: 100%;
+    }
+
     /* Portfolio */
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        margin: 15px 0;
+        gap: 20px;
+    }
+
     .portfolio-kort {
         width: 100%;
-        margin: 10px 0;
     }
 
-    /* Sociala länkar */
-    .social-lank {
-        flex-wrap: wrap;
-        justify-content: center;
+    .portfolio-kort img {
+        width: 100%;
+        height: auto;
     }
 
-    /* Sökfält */
-    .sok-ruta {
-        max-width: 100%;
+    /* Kontaktsidan */
+    .kontakt-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kontakt-bild img {
+        width: 180px;
+    }
+
+    .sociala-lankar {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .sociala-lankar img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Knappar */
+    .nyheter24-knapp {
+        margin: 15px 0;
     }
 
 }
